@@ -1,0 +1,2 @@
+[Mon Oct 02 2017 19:40:38 GMT+0300 (MSK)] layer "puzzle-form.png": Duplicate path: puzzle-form.png
+[Mon Oct 02 2017 19:40:38 GMT+0300 (MSK)] layer "my_puzzles_yellow.png": Duplicate path: my_puzzles_yellow.png
