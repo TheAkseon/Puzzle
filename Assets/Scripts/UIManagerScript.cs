@@ -68,7 +68,7 @@ public class UIManagerScript : MonoBehaviour
 
     public void Start()
     {
-        //Yodo1U3dAds.InitializeSdk();
+       // Yodo1U3dAds.InitializeSdk();
         Application.targetFrameRate = 60;
         DefUser();
         if (GameObject.Find("MainAudio") == null)

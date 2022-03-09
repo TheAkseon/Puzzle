@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GoogleMobileAdsScript : MonoBehaviour
 {
- /*   public static bool needReward = false;
+  /*  public static bool needReward = false;
     void Awake() 
     {
         DontDestroyOnLoad(gameObject);
@@ -12,8 +12,8 @@ public class GoogleMobileAdsScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Yodo1U3dAds.InitializeSdk();
-       // load_Interstitial();
+        Yodo1U3dAds.InitializeSdk();
+        load_Interstitial();
         load_Rewarded_Video();
         
     }
@@ -25,27 +25,27 @@ public class GoogleMobileAdsScript : MonoBehaviour
     }
     private static void load_Rewarded_Video() 
     {
-       // Yodo1U3dSDK.setRewardVideoDelegate((Yodo1U3dConstants.AdEvent adEvent, string error) =>
-    //    {
-          //  Debug.Log("RewardVideoDelegate:" + adEvent + "\n" + error);
-         //   switch (adEvent)
+        Yodo1U3dSDK.setRewardVideoDelegate((Yodo1U3dConstants.AdEvent adEvent, string error) =>
+        {
+            Debug.Log("RewardVideoDelegate:" + adEvent + "\n" + error);
+            switch (adEvent)
             {
-              //  case Yodo1U3dConstants.AdEvent.AdEventClick:
+                case Yodo1U3dConstants.AdEvent.AdEventClick:
                     Debug.Log("Rewarded video ad has been clicked.");
-          //          break;
-            //    case Yodo1U3dConstants.AdEvent.AdEventClose:
+                    break;
+                case Yodo1U3dConstants.AdEvent.AdEventClose:
                     load_Rewarded_Video();
                     Debug.Log("Rewarded video ad has been closed.");
-            //        break;
-             //   case Yodo1U3dConstants.AdEvent.AdEventShowSuccess:
-            //        Yodo1U3dAds.ShowVideo();
+                    break;
+                case Yodo1U3dConstants.AdEvent.AdEventShowSuccess:
+                    Yodo1U3dAds.ShowVideo();
                     Debug.Log("Rewarded video ad has shown successful.");
-             //       break;
-             //   case Yodo1U3dConstants.AdEvent.AdEventShowFail:
+                    break;
+                case Yodo1U3dConstants.AdEvent.AdEventShowFail:
                     load_Rewarded_Video();
                     Debug.Log("Rewarded video ad show failed, the error message:" + error);
-              //      break;
-             //   case Yodo1U3dConstants.AdEvent.AdEventFinish:
+                    break;
+                case Yodo1U3dConstants.AdEvent.AdEventFinish:
                 if (needReward)
                 {
                   load_Rewarded_Video();
@@ -53,12 +53,12 @@ public class GoogleMobileAdsScript : MonoBehaviour
                   needReward = false;
                 }
                     Debug.Log("Rewarded video ad has been played finish, give rewards to the player.");
-              //      break;
+                    break;
             }
         });
     }
 
-   /*  private  static void load_Interstitial() 
+     private  static void load_Interstitial() 
     {
         Yodo1U3dSDK.setInterstitialAdDelegate((Yodo1U3dConstants.AdEvent adEvent, string error) =>
         {
@@ -108,7 +108,7 @@ public class GoogleMobileAdsScript : MonoBehaviour
              load_Rewarded_Video();
              Debug.Log("Rewarded Video Failed To load");
          }
-     }
+     }*/
      
-    */
+
 }
