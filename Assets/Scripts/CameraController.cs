@@ -92,6 +92,31 @@ public class CameraController : MonoBehaviour
         background.rectTransform.localScale = new Vector3(scaleX, scaleY, 1f);
         int orient = -backCam.videoRotationAngle;
         background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
+
+
+        if (Input.touchCount == 2 && Input.GetTouch(0).phase == TouchPhase.Moved && Input.GetTouch(1).phase == TouchPhase.Moved)
+        {
+            Touch touchZero = Input.GetTouch(0);
+            Touch touchOne = Input.GetTouch(1);
+
+            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+            float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+            float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
+
+            float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
+            float pinchAmount = deltaMagnitudeDiff * 0.02f * Time.deltaTime;
+            if (cropPhoto.rectTransform.localScale.x <= 1)
+            {
+                cropPhoto.rectTransform.localScale = new Vector3(1, 1);
+            }
+            if (cropPhoto.rectTransform.localScale.x <= 0.1)
+            {
+                cropPhoto.rectTransform.localScale = new Vector3(0.1f, 0.1f);
+            }
+            cropPhoto.rectTransform.localScale -= new Vector3(pinchAmount, pinchAmount, pinchAmount);
+        }
     }
 
     private int getId()
