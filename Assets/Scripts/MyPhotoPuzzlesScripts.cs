@@ -100,7 +100,7 @@ public class MyPhotoPuzzlesScripts : MonoBehaviour
         }
         else
         {
-            CoinsScript.getCoinsPriceListPopUp();
+          //  CoinsScript.getCoinsPriceListPopUp();
         }
     }
 

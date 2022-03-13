@@ -97,7 +97,7 @@ public class DifficultyScript : MonoBehaviour
         if (IsAdsOn())
         {
            //GoogleMobileAdsScript.Instance.ShowInterstitialAd(StartPlayingAfterAds);
-          //  GoogleMobileAdsScript.Show_interstitial();
+            //GoogleMobileAdsScript.Show_interstitial();
             StartPlayingAfterAds();
         }
         else

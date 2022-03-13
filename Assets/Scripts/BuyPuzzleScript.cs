@@ -62,7 +62,7 @@ public class BuyPuzzleScript : MonoBehaviour
         }
         else
         {
-            CoinsScript.getCoinsPriceListPopUp();
+           // CoinsScript.getCoinsPriceListPopUp();
         }
         Destroy(GameObject.Find("Loader"));
     }

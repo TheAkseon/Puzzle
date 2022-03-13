@@ -6,6 +6,6 @@ public class ProductItemScript : MonoBehaviour
 
     public void BuyItem()
     {
-        Purchaser.main.BuyProduct(id);
+      //  Purchaser.main.BuyProduct(id);
     }
 }

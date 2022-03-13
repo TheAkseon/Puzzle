@@ -1,9 +1,11 @@
 //using Ads;
 using Entities;
 using UnityEngine;
+using GoogleMobileAds.Api;
 
 public class ResultsScript : MonoBehaviour
 {
+    
     public void Close()
     {
         PopUpDarkScripts.layers = 0;
@@ -28,6 +30,7 @@ public class ResultsScript : MonoBehaviour
     public void PlayAgain()
     {
         AudioScripts.Click();
+
         UIManagerScript.LoadScene("puzzleInfo");
     }
 
@@ -36,10 +39,10 @@ public class ResultsScript : MonoBehaviour
         AudioScripts.Click();
         if (IsAdsOn())
         {
-
-          //  GoogleMobileAdsScript.Instance.ShowRewardBasedVideo(PlayNextAfterAds, true);
+           
+           // GoogleMobileAdsScript.Instance.ShowRewardBasedVideo(PlayNextAfterAds, true);
             
-         //   GoogleMobileAdsScript.Show_Rewarded_Video(true);
+            //GoogleMobileAdsScript.ShowRewardBasedVideo();
             PlayNextAfterAds();
         }
         else

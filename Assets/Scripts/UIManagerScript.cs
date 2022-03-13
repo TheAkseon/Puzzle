@@ -68,7 +68,7 @@ public class UIManagerScript : MonoBehaviour
 
     public void Start()
     {
-       // Yodo1U3dAds.InitializeSdk();
+        //Yodo1U3dAds.InitializeSdk();
         Application.targetFrameRate = 60;
         DefUser();
         if (GameObject.Find("MainAudio") == null)
@@ -181,7 +181,7 @@ public class UIManagerScript : MonoBehaviour
         {
             PhotoPuzzles = StartPopUp("PhotoPuzzles", false, new Vector2(545, 715), 0).transform;
         }
-        Purchaser.main.LoadPurchaser();
+      //  Purchaser.main.LoadPurchaser();
         UserScripts u = GameObject.Find("User").GetComponent<UserScripts>();
         Coins.Find("Text").GetComponent<Text>().text = u.user.user_currencies[0].count.ToString();
         PhotoPuzzles.Find("Text").GetComponent<Text>().text = u.user.user_currencies[1].count.ToString();

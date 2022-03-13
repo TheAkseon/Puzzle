@@ -168,7 +168,7 @@ public class AuthPopUpScript : MonoBehaviour
         {
             u = User.GetComponent<UserScripts>();
         }
-        User.AddComponent<Purchaser>();
+       // User.AddComponent<Purchaser>();
         u.user = new UserScripts.User(token);
         APIMethodsScript.sendRequest("get", "/api/user/self", setUserData, prefix);
     }

@@ -6,20 +6,20 @@ public class CoinsScript : MonoBehaviour
 {
     public void ClosePopUp()
     {
-        UIManagerScript.ClosePopUp("CoinsPriceListPopUp");
+      //  UIManagerScript.ClosePopUp("CoinsPriceListPopUp");
     }
 
     public void RestorePurchases()
     {
-        StartCoroutine(RestorePurchasesCoroutine());
+      //  StartCoroutine(RestorePurchasesCoroutine());
     }
 
-    public IEnumerator RestorePurchasesCoroutine()
-    {
-        AudioScripts.Click();
-        int c = 0;
-        UIManagerScript.StartLoader();
-        while (!Purchaser.main.IsInitialized() && c < 10)
+    //public IEnumerator RestorePurchasesCoroutine()
+    
+      //  AudioScripts.Click();
+       // int c = 0;
+       // UIManagerScript.StartLoader();
+      /*  while (!Purchaser.main.IsInitialized() && c < 10)
         {
             Purchaser.main.LoadPurchaser();
             c++;
@@ -124,5 +124,5 @@ public class CoinsScript : MonoBehaviour
                 this.f = f.Value;
             }
         }
-    }
+    }*/
 }
